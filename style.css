@@ -1,32 +1,135 @@
 :root {
-  --Moderate_violet: hsl(263, 55%, 52%);
-  --grayish_blue: hsl(217, 19%, 35%);
-  --blackish_blue: hsl(219, 29%, 14%);
-  --White: hsl(0, 0%, 100%);
-  --Light_gray: hsl(0, 0%, 81%);
-  --Light_blue: hsl(210, 46%, 95%);
-  }
-
-.medium {
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .semibold {
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
+  --Moderate_violet: hsl(263, 55%, 52%); /* rgb(117,65,200)*/
+  --Very_dark_grayish_blue: hsl(217, 19%, 35%); /* rgb(72,85,106)*/
+  --Very_dark_blackish_blue: hsl(219, 29%, 14%); /* rgb(25,30,46)*/
+  --White: hsl(0, 0%, 100%); /* rgb(255,255,255)*/
+  --Light_gray: hsl(0, 0%, 81%); /* rgb(207,207,207)*/
+  --Light_grayish_blue: hsl(210, 46%, 95%); /* rgb(236,246,248)*/
+}
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}  
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  color: var(--Light_gray);
+}
+
+img {
+  border-radius: 50%;
+  border: 2px solid var(--Light_gray);
+}
+
+.container {
+  background: var(--Light_grayish_blue);
+  width: 100vw;
+}
 
 main {
-  width: 100%;
+  width: 100vw;
   display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 7vw 2vw;
 }
-  
+
+.grup {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.b_violet {
+  background: var(--Moderate_violet);
+}
+
+.b_grayish_blue {
+  background: var(--Very_dark_grayish_blue);
+}
+
+.b_blackish_blue {
+  background: var(--Very_dark_blackish_blue);
+}
+
+.b_White {
+  background: var(--White);
+}
+
+.cart {
+  border-radius: 3rem;
+  padding: 2rem;
+  border: 1rem solid var(--Light_grayish_blue);
+}
+
+.datail {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.long {
+  width: 100vw;
+}
+
+.short {
+  width: 100vw;
+}
+
+.barlow-semi-condensed-medium {
+  font-weight: 500;
+}
+
+.barlow-semi-condensed-semibold {
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .grup,
+  .long {
+    width: 64vw;
+  }
+
+  .short {
+    width: 32vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .grup {
+    width: 72vw;
+  }
+
+  .long {
+    width: 48vw;
+  }
+
+  .short {
+    width: 24vw;
+  }
+}
